@@ -2,224 +2,140 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página web del ciclo SMR</title>
+    <title>Índice del proyecto SMR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Alvaro">
-    <meta name="description" content="Información de SMR">
-    <meta name="keywords" content="información, ubicación">
 
-    <link rel="icon" type="image/png" href="Logo.png">
-
-    <!-- MANIFIESTO PWA -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#26a69a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="SMR Web">
-    <link rel="apple-touch-icon" href="Logo.png">
-
-    <!-- FUENTE GOOGLE -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-
-    <!-- ESTILOS INTERNOS -->
     <style>
         body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #e0f7fa, #b2dfdb);
             margin: 0;
-            background: linear-gradient(135deg, #e3f2fd, #b2dfdb);
-            font-family: 'Source Code Pro', monospace, Arial, sans-serif;
             color: #004d40;
         }
 
-        .inicio {
+        header {
             background-color: #26a69a;
-            padding: 30px 15px;
-            text-align: center;
-            color: #e0f2f1;
-        }
-
-        .inicio h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-
-        #google_translate_element {
-            margin-top: 15px;
-            transform: scale(0.8);
-        }
-
-        .map-container {
-            width: 80%;
-            height: 320px;
-            margin: 30px auto;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 3px solid #00796b;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .rectangulor {
-            background-color: #b2dfdb;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .rectangulor a {
-            margin: 10px;
-            padding: 12px 24px;
-            background-color: #004d40;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            display: inline-block;
-        }
-
-        .rectangulor a:hover {
-            background-color: #00796b;
-        }
-
-        .contenedor-botones {
-            padding: 40px 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .categoria {
-            background: white;
-            width: 260px;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .categoria h2 {
-            text-align: center;
-        }
-
-        .categoria a {
-            display: block;
-            margin: 10px 0;
-            padding: 12px;
-            background-color: #26a69a;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .categoria a:hover {
-            background-color: #00796b;
-        }
-
-        .final {
-            background-color: #00796b;
             color: white;
             padding: 30px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
 
-        details {
-            background-color: #004d40;
-            padding: 20px;
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        li {
+            background-color: #ffffffcc;
+            padding: 20px 30px;
             border-radius: 15px;
-            margin-top: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        @media (max-width: 768px) {
-            .map-container {
-                width: 95%;
-                height: 220px;
-            }
-            .categoria {
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: #004d40;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        a:hover {
+            color: #00796b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #00796b;
+            color: white;
+            margin-top: 40px;
+            box-shadow: inset 0 0 15px #004d40;
+        }
+
+        @media (max-width: 600px) {
+            li {
                 width: 90%;
+                text-align: center;
             }
+        }
+
+        .mapa-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .mapa-container img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #004d40;
+            border-radius: 15px;
         }
     </style>
 </head>
 
 <body>
 
-<header class="inicio">
-    <h1>Página web del ciclo SMR</h1>
-    <div id="google_translate_element"></div>
+<header>
+    <h1>Índice del proyecto SMR</h1>
 </header>
 
 <main>
+    <h2>Enlaces a todas las páginas</h2>
+    <ul>
+        <li><a href="page/lista.html" target="_blank">Listas</a></li>
+        <li><a href="page/formato_texto.html" target="_blank">Formato de texto</a></li>
+        <li><a href="page/pagina_web.html" target="_blank">Página Web</a></li>
+        <li><a href="page/pagina_web_alternativa.html" target="_blank">Página Web Alternativa</a></li>
+        <li><a href="page/prueba.html" target="_blank">Prueba</a></li>
+        <li><a href="page/resumen_servidor_dhcp.html" target="_blank">Resumen servidor DHCP</a></li>
+        <li><a href="page/div.html" target="_blank">Ejercicio Div</a></li>
+        <li><a href="page/anclas.html" target="_blank">Anclas</a></li>
+        <li><a href="page/mi_primera_web.html" target="_blank">Mi Primera Web</a></li>
+        <li><a href="page/javascript.html" target="_blank">JavaScript</a></li>
+        <li><a href="page/formulario.html" target="_blank">Formulario</a></li>
+    </ul>
 
-    <section class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.885323152381!2d-5.871788724680243!3d38.96192347171569"
-            loading="lazy">
-        </iframe>
-    </section>
-
-    <section class="rectangulor">
-        <a href="https://iesdonosocortes.educarex.es/" target="_blank">Instituto</a>
-        <a href="https://www.todofp.es/inicio.html" target="_blank">Todo FP</a>
-    </section>
-
-    <section class="contenedor-botones">
-
-        <div class="categoria">
-            <h2>Tarea 1</h2>
-            <a href="html/estilos.html">Ejemplos de estilos</a>
-            <a href="Tarea 1/mi-primera-web.html">Mi primera web</a>
-            <a href="Proyecto/Proyecto/index.html">Proyecto</a>
-        </div>
-
-        <div class="categoria">
-            <h2>Tarea 2</h2>
-            <a href="Tarea 2/Resumen de servidorDHCP.html">Servidor DHCP</a>
-        </div>
-
-        <div class="categoria">
-            <h2>Tarea 3</h2>
-            <a href="Tarea 3/_!DOCTYPE html_.html">DOCTYPE</a>
-            <a href="Tarea 3/formato de texto.html">Formato de texto</a>
-        </div>
-
-        <div class="categoria">
-            <h2>JavaScript</h2>
-            <a href="javascript/index.html">Ejercicios JS</a>
-        </div>
-
-        <div class="categoria">
-            <h2>Formulario</h2>
-            <a href="formulario/formoluario.html">Formulario HTML</a>
-        </div>
-
-    </section>
+    <h2>Mapa sensible interactivo</h2>
+    <div class="mapa-container">
+        <img src="multimedia/mapa.webp" alt="Mapa interactivo" usemap="#map">
+        <map name="map">
+            <area shape="rect" coords="242,266,462,308" href="https://es.wikipedia.org/wiki/Espa%C3%B1a" alt="España" target="_blank">
+            <area shape="rect" coords="111,167,140,456" href="https://es.wikipedia.org/wiki/Portugal" alt="Portugal" target="_blank">
+            <area shape="rect" coords="512,20,666,86" href="https://es.wikipedia.org/wiki/Francia" alt="Francia" target="_blank">
+        </map>
+    </div>
 
 </main>
 
-<footer class="final">
-    <h3>Información sobre la FP</h3>
-
-    <details>
-        <summary>¿Qué es el ciclo SMR?</summary>
-        <p>
-            El ciclo de Sistemas Microinformáticos y Redes prepara a los alumnos
-            para instalar, mantener y configurar equipos informáticos y redes.
-        </p>
-    </details>
+<footer>
+    SMR - Sistemas Microinformáticos y Redes | Proyecto de Formación Profesional
 </footer>
-
-<!-- TRADUCTOR GOOGLE -->
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-            {pageLanguage: 'es'},
-            'google_translate_element'
-        );
-    }
-</script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
